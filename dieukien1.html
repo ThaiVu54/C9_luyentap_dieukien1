@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều kiện 1</title>
+</head>
+<body>
+
+<!--<p id="soNguyen">result</p> bai 1-->
+<div>
+    <label for="boxnhap">nhap ten hoc sinh</label>
+    <input type="text" id="boxnhap">
+    <button onclick="tinhDiemTB()">Kiem tra</button>
+</div>
+
+
+
+
+
+
+
+<script>
+    // // nhap vao 2 so a va b va kiem tra a co chia het cho b hay khong
+    // let a = prompt('nhap a')
+    // a = parseInt(a)
+    // let b = prompt('nhap vao b')
+    // b = parseInt(b)
+    // if(a%b==0){
+    //     alert('a chia het cho b')
+    // }else alert('a khong chia het cho b')
+    //
+    // //nhap tuoi va in ra ket qua neu tuoi hoc sinh do khong du dieu kien vao lop 10
+    // let tuoi = prompt('nhap tuoi')
+    // tuoi = parseInt(tuoi)
+    // if(tuoi < 15){
+    //     alert(tuoi + ' khong du dieu kien vao lop 10')
+    // }
+    //
+    // //nhap so nguyen bat ki va in kq ra man hinh de noi cho nguoi dung biet so do lon hon hay nho hon 0
+    // let int = prompt('nhap so nguyen bat ky')
+    // int = parseInt(int)
+    // alert(int)
+    // if(int > 0){
+    //     document.getElementById('soNguyen').innerText = 'so '+ int +' lon hon 0'
+    // }else document.getElementById('soNguyen').innerText = 'so '+int+' nho hon 0'
+
+    // // nhap 3 so nguyen va tim gia tri lon nhat cua 3 so nguyen
+    // let int1 = prompt('nhap so thu 1')
+    // int1 = parseInt(int1)
+    // let int2 = prompt('nhap so thu 2')
+    // int2 = parseInt(int2)
+    // let int3 = prompt('nhap so thu 3')
+    // int3 = parseInt(int3)
+    // let max = int1
+    // if(max < int2){
+    //     max = int2
+    // }
+    // if(max < int3){
+    // max = int3
+    // }
+    // document.write('so lon nhat la: '+ max)
+
+    // Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ\
+
+    function tinhDiemTB(){
+        let kiemTra = prompt('nhap diem kiem tra')
+        kiemTra = parseFloat(kiemTra)
+        let giuaKi = prompt('nhap diem thi giua ki')
+        giuaKi = parseFloat(giuaKi)
+        let cuoiKi = prompt('nhap diem thi cuoi ki')
+        cuoiKi = parseFloat(cuoiKi)
+        let diemTrungBinh = (kiemTra + giuaKi + cuoiKi)/3
+        alert('diem trung binh la'+diemTrungBinh)
+        if(diemTrungBinh < 5){
+            alert('kem')
+        }else if(diemTrungBinh < 7){
+            alert('kha')
+        }else alert('gioi')
+    }
+
+    //tinh hoa hong nhan duoc tuy theo doanh so ban hang
+
+    //tinh cuoc dien thoai cho 1 ho gia dinh voi cac thong so da cho
+</script>
+</body>
+</html>
